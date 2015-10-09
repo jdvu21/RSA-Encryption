@@ -159,7 +159,7 @@ bool fermatTest(long n)
 	if (n % 2 == 0) // even numbers
 		return false;
 
-	for (int i = 3; i < sqrt(n); i += 2)
+	for (int i = 3; i <= sqrt(n); i += 2)
 	{	if (n % i == 0)
 			return false;
 	}
