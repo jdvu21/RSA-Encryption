@@ -116,15 +116,16 @@ int main(int argc, char *argv[]) {
 
 long pGenerator(long n) // size of the prime number in digits; check using fermats test
 {
-  long size = n;
-  int numArray[size];
-  std::string numberStr = "";
-
-  while (n < 0) // bounds check; no negatives, will loop until n is postive
+	
+	while (n < 0) // bounds check; no negatives, will loop until n is postive
   {
     cout << "a number cannot have negative digits. enter a postive n:" << endl;
     cin >> n;
   }
+  
+  long size = n;
+  int numArray[size];
+  std::string numberStr = "";
 
   for (int i = 0; i < size; i++) // each digit will be a random number from 0 - 9
   {
@@ -149,10 +150,16 @@ long pGenerator(long n) // size of the prime number in digits; check using ferma
 
 bool fermatTest(long n)
 {
+	if (n < 2)		//By the definition of prime, numbers less than 2 are not prime
+		return false;
+		
+	if (n == 2)		//2 is Prime
+		return true;
+		
 	if (n % 2 == 0) // even numbers
 		return false;
 
-	for (int i = 3; i < sqrt(n); i += 2)
+	for (int i = 3; i <= sqrt(n); i += 2)
 	{	if (n % i == 0)
 			return false;
 	}
