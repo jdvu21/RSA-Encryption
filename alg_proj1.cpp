@@ -1,7 +1,7 @@
 /* ****************************************************************************
  *
  * Jeff Vu 
- * UAkron - Algorithms - Fall 2015
+ * Algorithms - Fall 2015
  * Project 1 - RSA encryption (C++)
  * This file is part of rsa - the RSA implementation in C++.
  *
